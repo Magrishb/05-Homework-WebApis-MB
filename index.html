@@ -17,17 +17,32 @@
             href="style.css">
     </head>
     <body>
-        <h1>
+        <!-- <h1>
             Hello World!
-        </h1>
+        </h1> -->
         
         <!-- Navbar with link to "Hight-Score" and countdown timer-->
         <nav id="fulNavbar" class="navbar navbar-header navbar-dark bg-dark">
             <a id="navbarLink" class="nav-link"href="#">View High Scores</a>
             <div class="navbar-right" id="navbarText">
-                <span id="timer" class="navbar-text">Time Remaining: 0 </span>
+                <span id="timer" class="navbar-text">Time Remaining: 75 </span>
             </div>
         </nav>
+
+        <!--Main container-->
+        <main class="container main-containe m-auto">
+        <!-- Sub-container to hold header and paragraph along with a start button -->
+            <div class="container" id="starting-container">
+                <h2 id="main-header">Coding Quiz Challenge</h2>
+                <div>
+                    <p>Try to answer the following code-related questions qithin the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds.
+                    </p>
+                    <button class = "btn btn-dark" id="start-quiz-btn">Start Quiz
+                    </button>
+                </div>
+            </div>
+        
+        </main>
         <script src="" async defer></script>
     </body>
 </html>
