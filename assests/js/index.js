@@ -14,7 +14,7 @@ var timerId;
 
 function startQuiz() {
     // hide starting container
-    var startScreen = document.getElementById("starting-container");
+    var startScreen = document.getElementById("start-screen");
     startScreen.setAttribute("class", "hide");
   
     // un-hide questions section
@@ -33,7 +33,7 @@ function startQuiz() {
     // get current question from array
     var currentQuestion = questions[currentQuestionIndex];
 
-    var title = document.getElementById("title");
+    var title = document.getElementById("question-title");
     title.textContent = currentQuestion.title;
   
     choices.innerHTML = "";
