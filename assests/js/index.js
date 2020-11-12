@@ -58,24 +58,36 @@ function startQuiz() {
         }
     
         // New Time
-        timerEl.textContent = time;
+        timer.textContent = time;
 
-        feedbackEl.textContent = "Correct!";
-      }
+        feedback.textContent = "Wrong!";
+    } else {  
+        feedback.textContent = "Correct!";
+    }      
     
       // flash right/wrong feedback on page for half a second
-      feedbackEl.setAttribute("class", "feedback");
+      feedback.setAttribute("class", "feedback");
       setTimeout(function() {
         feedbackEl.setAttribute("class", "feedback hide");
       }, 1000);
       
-    // move to the next question
-    currentQuestionIndex++;
+        // click to next question
+        currentQuestionIndex++;
   
-    // check if user has run out of questions
+ 
     if (currentQuestionIndex === questions.length) {
       quizEnd();
     } else {
       getQuestion();
+    }
+  }
+
+  function clockTick() {
+    time--;
+    timerEl.textContent = time;
+
+    // check timer for end
+    if (time <= 0) {
+      quizEnd();
     }
   }
