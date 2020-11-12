@@ -30,7 +30,7 @@
         </nav>
 
         <!--Main container-->
-        <main class="wrapper">
+        <div class="wrapper">
         <!-- Sub-container to hold header and paragraph along with a start button -->
             <div class="start" id="starting-container">
                 <h2 id="main-header">Coding Quiz Challenge</h2>
@@ -43,26 +43,21 @@
             </div>
         <!-- Set up the question and answer choices -->
             <div id="questions-container" class="hide">
-                <div id="title">
-                    Question:
-                </div>
+                <h2 id="title"></h2>
+                <div id="choices" class="choices"></div>
             </div>
             <!-- Submit form -->
-            <div id = "Submit-form">
-                <div class="form-group">
-                    <label for="exampleFormControlImput1">Enter Your Email Address Here
-                    </label>
-                    <input type="email"
-                        class="form-control"
-                        id="email-input"
-                        placeholder="name@example.com"
-                    />
-                    <button id="submit-btn" type="button" class="btn btn-light">
-                        Submit
-                    </button>
-                </div>
+            <div id="end-screen" class="hide">
+                <h2>FINISH</h2>
+                <p>Your score is<span id="final-score"></span>.</p>
+                <p>
+                  Enter your initials: <input type="text" id="initials" max="3" />
+                  <button id="submit">SUBMIT</button>
+                </p>
             </div>
-        </main>
+            <div id="feedback" class="feedback hide"></div>
+        </div>
+
         <script src="./index.js" async defer></script>
     </body>
 </html>
