@@ -7,3 +7,20 @@ var startBtn = document.getElementById("start");
 var initial = document.getElementById("initials");
 var feedback = document.getElementById("feedback");
 
+function startQuiz() {
+    // hide starting container
+    var startScreen = document.getElementById("starting-container");
+    startScreen.setAttribute("class", "hide");
+  
+    // un-hide questions section
+    questions.removeAttribute("class");
+  
+    // start timer
+    timerId = setInterval(clockTick, 1000);
+  
+    // show starting time
+    timer.textContent = time;
+  
+    getQuestion();
+  }
+  
