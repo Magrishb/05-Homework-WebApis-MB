@@ -84,10 +84,49 @@ function startQuiz() {
 
   function clockTick() {
     time--;
-    timerEl.textContent = time;
+    timer.textContent = time;
 
     // check timer for end
     if (time <= 0) {
       quizEnd();
+    }
+  }
+  
+  function quizEnd() {
+    clearInterval(timerId);
+  
+    // show the end of the screen
+    var endScreen = document.getElementById("end-screen");
+    endScreen.removeAttribute("class");
+  
+    // show the final score
+    var finalScore = document.getElementById("final-score");
+    finalScore.textContent = time;
+  
+    // hide questions container
+    questions.setAttribute("class", "hide");
+  }
+
+  function saveHighscore() {
+    // get value of input box
+    var initials = initials.value.trim();
+  
+    if (initials !== "") {
+      // get saved scores from localstorage
+      var highscores =
+        JSON.parse(window.localStorage.getItem("highscores")) || [];
+  
+      // new score formatter
+      var newScore = {
+        score: time,
+        initials: initials
+      };
+  
+      // save to localstorage
+      highscores.push(newScore);
+      window.localStorage.setItem("highscores", JSON.stringify(highscores));
+  
+      // next page
+      window.location.href = "highscores.html";
     }
   }
