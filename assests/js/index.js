@@ -49,3 +49,15 @@ function startQuiz() {
       });
   }
   
+  function questionClick() {
+      
+    // move to the next question
+    currentQuestionIndex++;
+  
+    // check if user has run out of questions
+    if (currentQuestionIndex === questions.length) {
+      quizEnd();
+    } else {
+      getQuestion();
+    }
+  }
