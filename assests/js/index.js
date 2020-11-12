@@ -32,5 +32,10 @@ function startQuiz() {
   function getQuestion() {
     // get current question from array
     var currentQuestion = questions[currentQuestionIndex];
+
+    var title = document.getElementById("title");
+    title.textContent = currentQuestion.title;
+  
+    choices.innerHTML = "";
   }
   
