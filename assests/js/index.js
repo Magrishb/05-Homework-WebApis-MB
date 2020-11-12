@@ -52,13 +52,22 @@ function startQuiz() {
   function questionClick() {
 
     if (this.value !== questions[currentQuestionIndex].answer) {
-
         time -= 15;
-    
         if (time < 0) {
           time = 0;
         }
     
+        // New Time
+        timerEl.textContent = time;
+
+        feedbackEl.textContent = "Correct!";
+      }
+    
+      // flash right/wrong feedback on page for half a second
+      feedbackEl.setAttribute("class", "feedback");
+      setTimeout(function() {
+        feedbackEl.setAttribute("class", "feedback hide");
+      }, 1000);
       
     // move to the next question
     currentQuestionIndex++;
