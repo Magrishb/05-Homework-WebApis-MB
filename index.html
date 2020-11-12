@@ -24,8 +24,7 @@
         <!-- Navbar with link to "Hight-Score" and countdown timer-->
         <nav id="fulNavbar" class="navbar navbar-header navbar-dark bg-dark">
             <a id="navbarLink" class="nav-link"href="#">View High Scores</a>
-            <div class="navbar-right" id="navbarText">
-                <span id="timer" class="navbar-text">Time Remaining: 75 </span>
+            <div class="timer">Time: <span id="time">0</span></div>
             </div>
         </nav>
 
@@ -33,13 +32,11 @@
         <div class="wrapper">
         <!-- Sub-container to hold header and paragraph along with a start button -->
             <div class="start" id="starting-container">
-                <h2 id="main-header">Coding Quiz Challenge</h2>
-                <div>
+                <h2>Coding Quiz Challenge</h2>
                     <p>Try to answer the following code-related questions qithin the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds.
                     </p>
-                    <button class = "btn btn-light" id="start">Start Quiz
+                    <button id="start">Start Quiz
                     </button>
-                </div>
             </div>
         <!-- Set up the question and answer choices -->
             <div id="questions-container" class="hide">
@@ -51,13 +48,13 @@
                 <h2>FINISH</h2>
                 <p>Your score is<span id="final-score"></span>.</p>
                 <p>
-                  Enter your initials: <input type="text" id="initial" max="3" />
+                  Enter your initials: <input type="text" id="initials" max="3" />
                   <button id="submit">SUBMIT</button>
                 </p>
             </div>
             <div id="feedback" class="feedback hide"></div>
         </div>
 
-        <script src="./index.js" async defer></script>
+        <script src="./assests/js/index.js" async defer></script>
     </body>
 </html>

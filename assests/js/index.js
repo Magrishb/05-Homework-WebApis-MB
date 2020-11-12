@@ -1,10 +1,10 @@
 // List all the variables.
-var questions = document.getElementById("questions");
+var questions = document.getElementById("questions-container");
 var timer = document.getElementById("time");
 var choices = document.getElementById("choices");
 var submitBtn = document.getElementById("submit");
 var startBtn = document.getElementById("start");
-var initial = document.getElementById("initials");
+var initials = document.getElementById("initials");
 var feedback = document.getElementById("feedback");
 
 // Keep track of quiz
@@ -68,7 +68,7 @@ function startQuiz() {
       // flash right/wrong feedback on page for half a second
       feedback.setAttribute("class", "feedback");
       setTimeout(function() {
-        feedbackEl.setAttribute("class", "feedback hide");
+        feedback.setAttribute("class", "feedback hide");
       }, 1000);
       
         // click to next question
@@ -93,7 +93,7 @@ function startQuiz() {
   }
   
   function quizEnd() {
-    clearInterval(timerId);
+    clearInterval(timer);
   
     // show the end of the screen
     var endScreen = document.getElementById("end-screen");
@@ -130,3 +130,17 @@ function startQuiz() {
       window.location.href = "highscores.html";
     }
   }
+
+  function checkForEnter(event) {
+    if (event.key === "Enter") {
+      saveHighscore();
+    }
+  }
+  
+  // ubmit initials
+  submitBtn.onclick = saveHighscore;
+  
+  // start quiz
+  startBtn.onclick = startQuiz;
+  
+  initials.onkeyup = checkForEnter;
