@@ -11,3 +11,4 @@ var ansD = document.getElementById("A");
 var submitForm = document.getElementById("submit-form");
 var submitEmail = document.getElementById("email-input");
 var submitButton = document.getElementById("submit-btn");
+
