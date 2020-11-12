@@ -43,8 +43,9 @@ function startQuiz() {
         var choiceNode = document.createElement("button");
         choiceNode.setAttribute("class", "choice");
         choiceNode.setAttribute("value", choice);
-    
         choiceNode.textContent = i + 1 + ". " + choice;
+        choiceNode.onclick = questionClick;
+        choices.appendChild(choiceNode);
       });
   }
   
