@@ -1,10 +1,10 @@
 // List all the variables.
-var questions = document.getElementById("questions-container");
+var questionsEl = document.getElementById("questions");
 var timer = document.getElementById("time");
 var choices = document.getElementById("choices");
 var submitBtn = document.getElementById("submit");
 var startBtn = document.getElementById("start");
-var initials = document.getElementById("initials");
+var initialsEl = document.getElementById("initials");
 var feedback = document.getElementById("feedback");
 
 // Keep track of quiz
@@ -18,7 +18,7 @@ function startQuiz() {
     startScreen.setAttribute("class", "hide");
   
     // un-hide questions section
-    questions.removeAttribute("class");
+    questionsEl.removeAttribute("class");
   
     // start timer
     timerId = setInterval(clockTick, 1000);
@@ -104,12 +104,12 @@ function startQuiz() {
     finalScore.textContent = time;
   
     // hide questions container
-    questions.setAttribute("class", "hide");
+    questionsEl.setAttribute("class", "hide");
   }
 
   function saveHighscore() {
     // get value of input box
-    var initials = initials.value.trim();
+    var initials = initialsEl.value.trim();
   
     if (initials !== "") {
       // get saved scores from localstorage

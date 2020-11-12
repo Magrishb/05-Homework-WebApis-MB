@@ -14,7 +14,7 @@
             integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
             crossorigin="anonymous">
         <link rel="stylesheet" 
-            href="style.css">
+            href="./assests/css/styles.css">
     </head>
     <body>
         <!-- <h1>
@@ -22,22 +22,20 @@
         </h1> -->
         
         <!-- Navbar with link to "Hight-Score" and countdown timer-->
-        <nav id="fulNavbar" class="navbar navbar-header navbar-dark bg-dark">
-            <a id="navbarLink" href="highscores.html">View High Scores</a>
-            <div class="timer">Time: <span id="time">0</span></div>
-            </div>
-        </nav>
+        <div class="scores"><a href="highscores.html">View Highscores</a></div>
+
+        <div class="timer">Time: <span id="time">0</span></div>
 
         <!--Main container-->
         <div class="wrapper">
         <!-- Sub-container to hold header and paragraph along with a start button -->
-            <div class="start" id="start-screen">
-                <h2>Coding Quiz Challenge</h2>
+        <div id="start-screen" class="start">
+            <h2>Coding Quiz Challenge</h2>
                 <p>Try to answer the following code-related questions qithin the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds.
                 </p>
                 <button id="start">Start Quiz
                 </button>
-            </div>
+        </div>
         <!-- Set up the question and answer choices -->
             <div id="questions" class="hide">
                 <h2 id="question-title"></h2>
@@ -53,6 +51,7 @@
                 </p>
             </div>
             <div id="feedback" class="feedback hide"></div>
+        </div>
         </div>
 
         <script src="./assests/js/index.js" async defer></script>

@@ -1,8 +1,7 @@
 // list of all questions, choices, and answers
 var questions = [
     {
-        title:
-            "What does 'var' mean?",
+        title: "What does 'var' mean?",
         choices: ["variable", "variation", "varsity", "various"],
         answer: "variable"
     },
