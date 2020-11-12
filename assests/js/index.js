@@ -7,6 +7,11 @@ var startBtn = document.getElementById("start");
 var initial = document.getElementById("initials");
 var feedback = document.getElementById("feedback");
 
+// Keep track of quiz
+var currentQuestionIndex = 0;
+var time = questions.length * 15;
+var timerId;
+
 function startQuiz() {
     // hide starting container
     var startScreen = document.getElementById("starting-container");
@@ -22,5 +27,10 @@ function startQuiz() {
     timer.textContent = time;
   
     getQuestion();
+  }
+
+  function getQuestion() {
+    // get current question from array
+    var currentQuestion = questions[currentQuestionIndex];
   }
   
