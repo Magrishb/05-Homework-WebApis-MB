@@ -1,6 +1,6 @@
 // List all the variables.
 var questionsEl = document.getElementById("questions");
-var timer = document.getElementById("time");
+var timerEl = document.getElementById("time");
 var choices = document.getElementById("choices");
 var submitBtn = document.getElementById("submit");
 var startBtn = document.getElementById("start");
@@ -24,7 +24,7 @@ function startQuiz() {
     timerId = setInterval(clockTick, 1000);
   
     // show starting time
-    timer.textContent = time;
+    timerEl.textContent = time;
   
     getQuestion();
   }
@@ -58,7 +58,7 @@ function startQuiz() {
         }
     
         // New Time
-        timer.textContent = time;
+        timerEl.textContent = time;
 
         feedback.textContent = "Wrong!";
     } else {  
@@ -84,7 +84,7 @@ function startQuiz() {
 
   function clockTick() {
     time--;
-    timer.textContent = time;
+    timerEl.textContent = time;
 
     // check timer for end
     if (time <= 0) {
