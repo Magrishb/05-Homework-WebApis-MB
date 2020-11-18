@@ -93,11 +93,12 @@ function startQuiz() {
   }
   
   function quizEnd() {
-    clearInterval(timer);
+    clearInterval(timerId);
   
     // show the end of the screen
     var endScreen = document.getElementById("end-screen");
-    endScreen.removeAttribute("class");
+    //endScreen.classList.remove("class");
+    endScreen.removeAttribute("class")
   
     // show the final score
     var finalScore = document.getElementById("final-score");

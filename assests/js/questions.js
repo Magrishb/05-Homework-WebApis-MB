@@ -8,7 +8,7 @@ var questions = [
     {
         title: "An array is ?",
         choices: ["a function", "a collection of like or similar items", "a variation of colors", "a collection of colors"],
-        answer: "A collection of like or similar items"
+        answer: "a collection of like or similar items"
     },
     {
         title: "What is CSS used for ?",
